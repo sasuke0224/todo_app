@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\CRE\Desktop\todo_app\resources\views/tasks/index.blade.php ENDPATH**/ ?>
