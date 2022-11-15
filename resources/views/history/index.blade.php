@@ -25,7 +25,7 @@
                 
                   </div>
                 </form>
-                @if ($history->isNotEmpty())
+                @if ($tasks->isNotEmpty())
                     <div class="max-w-7xl mx-auto mt-20">
                         <div class="inline-block min-w-full py-2 align-middle">
                             <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -51,7 +51,7 @@
                                                 <td class="p-0 text-right text-sm font-medium">
                                                     <div class="flex justify-end">
                                                         <div>
-                                                            <form action="/history/{{ $item->id }}"
+                                                            <form action="/tasks/{{ $item->id }}"
                                                                 method="post"
                                                                 class="inline-block text-gray-500 font-medium"
                                                                 role="menuitem" tabindex="-1">

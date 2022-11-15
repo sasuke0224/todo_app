@@ -17,9 +17,9 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        $history = Task::where('status', true)->get();
+        $tasks = Task::where('status', true)->get();
   
-        return view('history.index', compact('history'));
+        return view('history.index', compact('tasks'));
     }
 
     /**
@@ -51,7 +51,7 @@ class HistoryController extends Controller
         $history = new History;
         
         //モデル->カラム名 = 値 で、データを割り当てる
-        $history->name = $request->input('history_name');
+        $history->name = $request->input('task_name');
         
         //データベースに保存
         $history->save();
@@ -92,11 +92,9 @@ class HistoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-    //「編集する」ボタンをおしたとき
+    //「完了」ボタンを押したとき
     if ($request->status === 0) {
 
-        //「完了」ボタンを押したとき
-    
         //該当のタスクを検索
         $history = Task::find($id);
     
@@ -109,7 +107,7 @@ class HistoryController extends Controller
     
     
       //リダイレクト
-      return redirect('/history');
+      return redirect('/History');
     }
 
     /**
