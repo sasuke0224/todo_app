@@ -51,7 +51,7 @@
                                                 <td class="p-0 text-right text-sm font-medium">
                                                     <div class="flex justify-end">
                                                         <div>
-                                                            <form action="/tasks/{{ $item->id }}"
+                                                            <form action="/History/{{ $item->id }}"
                                                                 method="post"
                                                                 class="inline-block text-gray-500 font-medium"
                                                                 role="menuitem" tabindex="-1">

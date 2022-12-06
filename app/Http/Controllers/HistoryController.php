@@ -93,21 +93,20 @@ class HistoryController extends Controller
     public function update(Request $request, $id)
     {
     //「完了」ボタンを押したとき
-    if ($request->status === 0) {
-
+    
         //該当のタスクを検索
         $history = Task::find($id);
     
         //モデル->カラム名 = 値 で、データを割り当てる
-        $history->status = true; //true:完了、false:未完了
+        $history->status = false; //true:完了、false:未完了
     
         //データベースに保存
         $history->save();
-      }
+    
     
     
       //リダイレクト
-      return redirect('/History');
+      return redirect('/tasks');
     }
 
     /**
